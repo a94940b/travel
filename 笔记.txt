@@ -1,0 +1,12 @@
+1. 解决移动端部分机型click事件延迟300ms执行的问题 ：
+npm安装fastclick，在开发环境及生产环境均需要这个包  
+cnpm install fastclick --save 
+
+安装好之后，在main.js中引入                    import fastClick 'fastClick'
+并运用attach方法，将其绑定到document.body      fastClick.attach(document.body)
+
+
+2. 引入border.css 解决一像素边框问题
+
+3. 引入reset.css 解决样式初始化
+  
