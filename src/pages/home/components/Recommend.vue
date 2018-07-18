@@ -5,7 +5,7 @@
     </div>
     <ul>
       <li class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of list"
           :key="item.id"
       >
         <img class="item-img" :src='item.imgUrl' />
@@ -22,25 +22,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1603/3b/3bd311262ee06d8c90.img.jpg_200x200_c118d7da.jpg',
-        title: '广州长隆旅游度假区',
-        desc: '丰富有趣的活动嗨翻你的暑假！'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/41/411f234d79457081a3.img.jpg_200x200_ea02ef99.jpg',
-        title: '长隆野生动物世界',
-        desc: '野生动物世界考拉园：“欢欢”和“乐乐”，还有“四代同堂”的考拉大家族，将给游客带来更多欢乐！'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/9e/7b5e0a44cb0310280b1aeb2a8dd94de8.water.jpg_200x200_3c429960.jpg',
-        title: '长隆国际大马戏剧院',
-        desc: '长隆国际大马戏拥有全球首创实景式马戏舞台，为你打造令人惊叹的视听盛宴。'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
