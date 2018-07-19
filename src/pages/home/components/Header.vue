@@ -9,6 +9,7 @@
     </div>
     <router-link to='/city'>
       <div class="header-right">
+<!-- 有了mapState的映射，this.$store.state.city可以简写为this.city -->
         {{this.city}}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
@@ -17,11 +18,12 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    // ...是展开运算符，mapState表示映射。这句话是指把vuex中的公用数据city映射到这个组件上的名为city的computed属性中。
+    ...mapState(['city'])
   }
 }
 </script>
@@ -52,7 +54,8 @@ export default {
       border-radius: 0.1rem
       color: #ccc
     .header-right
-      width: 1.24rem
+      min-width: 1.04rem
+      padding: 0 .1rem
       float: right
       text-align: center
       // 解决路由点击跳转之后变绿色的问题
