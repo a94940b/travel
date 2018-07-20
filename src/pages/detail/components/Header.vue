@@ -5,7 +5,7 @@
     </router-link>
     <div
       class="header-fixed"
-      v-show="!showAbs"
+      v-show="showFixed"
       :style="opacityStyle"
     >
       <router-link tag="div" to="/">
@@ -25,6 +25,11 @@ export default {
       opacityStyle: {
         opacity: 0
       }
+    }
+  },
+  computed: {
+    showFixed () {
+      return !this.showAbs
     }
   },
   methods: {
