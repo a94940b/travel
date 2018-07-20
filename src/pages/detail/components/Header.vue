@@ -1,11 +1,11 @@
 <template>
   <div>
-    <router-link tag="div" to="/" class="header-abs" v-show="showAbs">
+    <router-link tag="div" to="/" class="header-abs" v-if="showAbs">
       <div class="iconfont header-abs-back">&#xe624;</div>
     </router-link>
     <div
       class="header-fixed"
-      v-show="showFixed"
+      v-if="showFixed"
       :style="opacityStyle"
     >
       <router-link tag="div" to="/">
