@@ -5,7 +5,7 @@
       :bannerImg="bannerImg"
       :bannerImgs="gallaryImgs"
     >
-     </detail-banner>
+    </detail-banner>
     <detail-header></detail-header>
     <div class="content">
       <!-- 组件自己引用自己——使用递归组件实现详情页列表 -->
@@ -47,7 +47,6 @@ export default {
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
-        console.log(data)
         this.sightName = data.sightName
         this.bannerImg = data.bannerImg
         this.gallaryImgs = data.gallaryImgs
