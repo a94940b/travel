@@ -38,11 +38,16 @@ export default {
       } else {
         this.showAbs = true
       }
-      console.log()
     }
   },
+  // 当我们对这个组件用了keepalive之后，这个组件就会多出activated和deactivated两个生命周期函数
+  // 在详情页面展示的时候，activated执行绑定全局事件scroll
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 在详情页面即将隐藏或者被替换的时候，deactivated执行对全局事件scroll解绑
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
