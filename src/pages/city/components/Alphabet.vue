@@ -1,5 +1,7 @@
 <template>
   <ul class="list">
+     <!-- 修复真机测试bug：手机端拖动右端字母列表时，整个屏幕会跟着上下滚动。
+      解决方法： 给touchstart事件加上.prevent，.prevent是事件修饰符，它可以阻止touchstart的默认行为 -->
     <li class="item"
       v-for="item of letters"
       :key="item"
