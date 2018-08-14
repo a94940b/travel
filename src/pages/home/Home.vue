@@ -3,6 +3,7 @@
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
+    <hot-board></hot-board>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
@@ -12,6 +13,7 @@
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
+import HotBoard from './components/HotBoard'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
@@ -23,6 +25,7 @@ export default {
     HomeHeader,
     HomeSwiper,
     HomeIcons,
+    HotBoard,
     HomeRecommend,
     HomeWeekend
   },
